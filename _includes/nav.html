@@ -1,0 +1,9 @@
+<nav class="navbar">
+    <div class="navItems">
+      <a href="/"><button class="navBtn {% if page.url == '/' %}active{% endif %}">About</button></a>
+      <a href="/blog"><button class="navBtn {% if page.url contains '/blog' %}active{% endif %}">Blog</button></a>
+      <a href="/chat"><button class="navBtn {% if page.url contains '/chat' %}active{% endif %}">Chat</button></a>
+      <a href="/guestbook"><button class="navBtn {% if page.url contains '/guestbook' %}active{% endif %}">Guestbook</button></a>
+    </div>
+  </nav>
+</body>
