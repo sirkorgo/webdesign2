@@ -18,8 +18,35 @@ main {
     background-color: #282828;
 }
 
+h1 {
+    font-family: "DM Sans";
+    color: white;
+    font-size: 30px;
+}
+
 p {
     color: white;
     font-family: "DM Sans";
     font-size: 17px;
+}
+
+.uiButton {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    height: fit-content;
+    width: fit-content;
+    height: 50px;
+    background: white;
+    font-family: "DM Sans";
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+}
+
+.uiButton a {
+    text-align: center;
+    color: black;
 }
