@@ -3,8 +3,8 @@
 
 body {
     background-color: rgb(25,25,25);
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 
 main {
@@ -73,4 +73,11 @@ small {
 .uiButton a {
     text-align: center;
     color: black;
+}
+
+@media (max-width: 768px) {
+     body {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
