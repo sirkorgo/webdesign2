@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-    background-color: #1a1a1a;
+    background-color: rgb(25,25,25);
     margin-left: 5vw;
     margin-right: 5vw;
 }
@@ -12,22 +12,41 @@ main {
 }
 
 .content {
-    min-height: 100px;
-    padding: 10px;
+    height: fit-content;
+    min-height: 450px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 15px;
-    background-color: #282828;
+    background: #424242;
+    background: linear-gradient(180deg,rgb(64, 64, 64) 0%, rgb(25, 25, 25) 100%);
 }
 
 h1 {
     font-family: "DM Sans";
     color: white;
     font-size: 30px;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: "DM Sans";
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 p {
     color: white;
     font-family: "DM Sans";
     font-size: 17px;
+}
+
+small {
+    font-style: italic;
+    color: #888888;
+    font-size: 12px;
 }
 
 .uiButton {
@@ -38,12 +57,17 @@ p {
     height: fit-content;
     width: fit-content;
     height: 50px;
-    background: white;
+    background:  white;
     font-family: "DM Sans";
     font-size: 14px;
     text-decoration: none;
     border: none;
     border-radius: 15px;
+}
+
+.uiButton:hover {
+    color: white !important;
+    background-color: #47cf8b;
 }
 
 .uiButton a {
