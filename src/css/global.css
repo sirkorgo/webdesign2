@@ -13,14 +13,21 @@ main {
 
 .content {
     height: fit-content;
-    min-height: 450px;
+    min-height: 500px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 15px;
     background: #424242;
-    background: linear-gradient(180deg,rgb(64, 64, 64) 0%, rgb(25, 25, 25) 100%);
+    background: linear-gradient(180deg,rgb(71, 71, 71) 0%, rgb(25, 25, 25) 90%);
+}
+
+.subContent {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    background-color: #585858;
 }
 
 h1 {
@@ -75,9 +82,23 @@ small {
     color: black;
 }
 
-@media (max-width: 768px) {
+.flexgrid1 {
+    display: flex;
+}
+
+@media (max-width: 725px) {
      body {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    main {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 850px) {
+     body {
+        margin-left: 7vw;
+        margin-right: 7vw;
     }
 }

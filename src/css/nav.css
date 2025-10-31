@@ -16,6 +16,7 @@
 }
 
 .navItems {
+  gap: 30px;
   display: flex;
   justify-content: center;
   height: 100%; /* Add this */
@@ -55,4 +56,21 @@ a {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     color: white;
+}
+
+@media (max-width: 850px) {
+    .navbar {
+          padding-bottom: 15px;
+          padding-top: 5px;
+          /* Remove previous properties */
+          top: unset; /* or top: auto; */
+          bottom: 0;
+          left: 0; /* Ensures it spans the full width */
+          transform: none; /* Removes the centering transform */
+          width: 100%; /* Makes it span the full width */
+          border-radius: 0; /* Optional: Makes it a full bottom bar */
+        }
+      .navItems {
+        gap: 30px;
+    }
 }
