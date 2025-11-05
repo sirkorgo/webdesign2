@@ -6,18 +6,16 @@ layout: default
     <div class="content">
            <h1>Contact</h1>
             <p>Fill in the form to contact me.</p>
-            <small>The data collected in this form is not collected in any way.</small>
             <br>
-            <form action="./src/js/form.php" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+            <form>
+                <input class="inputField" type="text" id="name" placeholder="Name" name="name">
+                <input class="inputField" type="email" placeholder="Email" id="email" name="email">
                 <br>
-                <label for="msg">Message</label>
+                <textarea style="margin-top: 5px;" class="inputField" id="msg" name="msg" rows="4" cols="50" placeholder="Message" ></textarea>
                 <br>
-                <textarea id="msg" name="msg" rows="4" cols="50"></textarea>
-                <input type="submit" value="Submit">
+                <small>The data collected in this form is not saved and is discarded upon submission.</small>
+                <br>
+                <input style="margin-top: 5px;" class="uiButton" type="submit" value="Send">
             </form>
     </div>
 </body>
