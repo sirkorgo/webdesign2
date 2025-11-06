@@ -23,6 +23,7 @@ main {
 }
 
 .subContent {
+    padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 15px;
@@ -60,6 +61,29 @@ small {
     font-style: italic;
     color: #888888;
     font-size: 12px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.subContentBtn {
+    min-width: 50px;
+    width: fit-content;
+    padding: 5px;
+    background-color: #3b3b3b;
+    border-radius: 7px;
+    font-family: "DM Sans";
+    color: white;
+    border: none;
+}
+
+.subContentHeader {
+    align-items: center;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .inputField {
