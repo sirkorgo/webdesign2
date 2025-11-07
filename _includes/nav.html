@@ -3,25 +3,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block"/>
 </head>
 <div class="navContainer">
-<nav class="navbar">
-    <div class="navItems">
-      <a alt="Home" href="./"><button class="navBtn {% if page.url == '/' %}active{% endif %}"><span class="material-symbols-outlined">&#xE88A;</span></button></a>
-      <a alt="About" href="./about"><button class="navBtn {% if page.url contains '/about' %}active{% endif %}"><span class="material-symbols-outlined">&#xe853;</span></button></a>
-      <a alt="Contact" href="./contact"><button class="navBtn {% if page.url contains '/contact' %}active{% endif %}"><span class="material-symbols-outlined">&#xe158;</span></button></a>
-      <a alt="Projects" href="./projects"><button class="navBtn {% if page.url contains '/projects' %}active{% endif %}"><span class="material-symbols-outlined">&#xeb3f;</span></button></a>
-    </div>
+  <nav class="navbar">
+      <div class="navItems">
+        <a alt="Home" href="./"><button class="navBtn {% if page.url == '/' %}active{% endif %}"><span class="material-symbols-outlined">&#xE88A;</span></button></a>
+        <a alt="About" href="./about"><button class="navBtn {% if page.url contains '/about' %}active{% endif %}"><span class="material-symbols-outlined">&#xe853;</span></button></a>
+        <a alt="Contact" href="./contact"><button class="navBtn {% if page.url contains '/contact' %}active{% endif %}"><span class="material-symbols-outlined">&#xe158;</span></button></a>
+        <a alt="Projects" href="./projects"><button class="navBtn {% if page.url contains '/projects' %}active{% endif %}"><span class="material-symbols-outlined">&#xeb3f;</span></button></a>
+      </div>
   </nav>
 
-<nav class="themeContainer">
-        <label class="toggle">
-          <input type="checkbox" onclick="toggleDarkLight()">
-          <span class="slider round"></span>
-        </label>
-        <script>
-          function toggleDarkLight() {
-            var element = document.body; 
-            element.classList.toggle("dark-mode"); 
-        }
-        </script>
-</nav>
+  <nav class="themeContainer">
+    <div style="display: flex;"
+
+    </div>
+  </nav>
 </div>
