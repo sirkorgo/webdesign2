@@ -1,10 +1,133 @@
 /* ===== NAVIGATION ===== */
 .navbar {
     width: fit-content;
-    position: fixed;
     top: 1vh;
     left: 50%;
-    transform: translateX(-50%);
+    z-index: 1000;
+    height: 50px;
+    align-items: center;
+
+    border-radius: 10px;
+    border: none;
+    background: #2e2e2e;
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.25);
+}
+
+.navContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+}
+
+.dark-mode {
+  background: black;
+
+  color: #fff;
+}
+
+/* Hide default HTML checkbox */
+
+.toggle input {
+  opacity: 1;
+
+  width: 0;
+
+  height: 0;
+}
+
+/* The slider */
+
+.slider {
+  position: absolute;
+
+  cursor: pointer;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  width: 100px;
+  height: 75%;
+
+  background-color: black;
+
+  -webkit-transition: 0.4s;
+
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+
+  content: "";
+
+  height: 90%;
+
+  width: 50%;
+
+  left: 7px;
+
+  bottom: 3px;
+
+  background-color: white;
+
+  -webkit-transition: 0.4s;
+
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: white;
+}
+
+input:checked + .slider::before {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(80%);
+
+  -ms-transform: translateX(80%);
+
+  transform: translateX(80%);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 20px;
+}
+
+
+
+.themeContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    top: 1vh;
+    left: 50%;
     z-index: 1000;
     height: 50px;
     align-items: center;
@@ -59,13 +182,21 @@ a {
 }
 
 @media (max-width: 850px) {
-    .navbar {
+    .navContainer {
+          gap: 0;
+          /* Positioning for the bottom of the window */
+          position: fixed; /* or 'absolute' depending on your needs, 'fixed' keeps it in view as you scroll */
+          top: unset; /* Ensures it doesn't try to use the 'top' property */
+          bottom: 0; /* Aligns to the bottom of the viewport */
+          left: 0; /* Aligns to the left of the viewport */
+          right: 0; /* Ensures it spans the full width of the viewport */
+          width: 100%; /* Explicitly set width */
+    }
+    .navbar, .themeContainer {
+          box-shadow: none;
           padding-bottom: 15px;
           padding-top: 5px;
           /* Remove previous properties */
-          top: unset; /* or top: auto; */
-          bottom: 0;
-          left: 0; /* Ensures it spans the full width */
           transform: none; /* Removes the centering transform */
           width: 100%; /* Makes it span the full width */
           border-radius: 0; /* Optional: Makes it a full bottom bar */
