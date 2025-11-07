@@ -78,6 +78,11 @@ img {
     border: none;
 }
 
+.subContentBtn:hover {
+    background-color: #cecece;
+    color: black;
+}
+
 .subContentHeader {
     align-items: center;
     margin-top: 5px;
