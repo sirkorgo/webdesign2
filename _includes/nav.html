@@ -2,20 +2,47 @@
     <link rel="stylesheet" href="./src/css/nav.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block"/>
 </head>
-<div class="navContainer">
-  <nav class="navbar">
-      <div class="navItems">
-        <a alt="Home" href="./"><button class="navBtn {% if page.url == '/' %}active{% endif %}"><span class="material-symbols-outlined">&#xE88A;</span></button></a>
-        <a alt="About" href="./about"><button class="navBtn {% if page.url contains '/about' %}active{% endif %}"><span class="material-symbols-outlined">&#xe853;</span></button></a>
-        <a alt="Contact" href="./contact"><button class="navBtn {% if page.url contains '/contact' %}active{% endif %}"><span class="material-symbols-outlined">&#xe158;</span></button></a>
-        <a alt="Projects" href="./projects"><button class="navBtn {% if page.url contains '/projects' %}active{% endif %}"><span class="material-symbols-outlined">&#xeb3f;</span></button></a>
-      </div>
-  </nav>
+<script>
+function setTheme(theme) {
+  if (theme === 'light') {
+    document.body.classList.add('light-theme');
+  } else {
+    document.body.classList.remove('light-theme');
+  }
+  localStorage.setItem('theme', theme);
+  updateActiveButton(theme);
+}
 
-  <nav class="themeContainer">
-    <div style="display: flex; gap: 5px; justify-content: center;"
-      <button class="themeButton" onclick=""><span class="material-symbols-outlined">&#xE518;</span></button>
-      <button class="themeButton" onclick=""><span class="material-symbols-outlined">&#xE51c;</span></button>
-    </div>
-  </nav>
+function updateActiveButton(theme) {
+  const buttons = document.querySelectorAll('.themeButton');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  
+  if (theme === 'light') {
+    buttons[1].classList.add('active'); // Second button is light
+  } else {
+    buttons[0].classList.add('active'); // First button is dark
+  }
+}
+
+// Run on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('theme') || 'dark';
+  setTheme(saved);
+});
+</script>
+<div class="navContainer">
+<nav class="navbar">
+<div class="navItems">
+<a alt="Home" href="./"><button class="navBtn {% if page.url == '/' %}active{% endif %}"><span class="material-symbols-outlined">&#xE88A;</span></button></a>
+<a alt="About" href="./about"><button class="navBtn {% if page.url contains '/about' %}active{% endif %}"><span class="material-symbols-outlined">&#xe853;</span></button></a>
+<a alt="Contact" href="./contact"><button class="navBtn {% if page.url contains '/contact' %}active{% endif %}"><span class="material-symbols-outlined">&#xe158;</span></button></a>
+<a alt="Projects" href="./projects"><button class="navBtn {% if page.url contains '/projects' %}active{% endif %}"><span class="material-symbols-outlined">&#xeb3f;</span></button></a>
+</div>
+</nav>
+<nav class="themeContainer">
+<div style="display: flex; gap: 5px; justify-content: center;">
+<button class="themeButton" onclick="setTheme('dark')"><span class="material-symbols-outlined">&#xE51c;</span></button>
+<button class="themeButton" onclick="setTheme('light')"><span class="material-symbols-outlined">&#xE518;</span></button>
+</div>
+</nav>
 </div>
